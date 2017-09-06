@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -18,12 +18,18 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      }, {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + "/src/index.tmpl.html"
+      template: path.join(__dirname, 'src') + '/index.pug'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
