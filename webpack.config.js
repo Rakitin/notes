@@ -29,8 +29,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: "./public",
-    historyApiFallback: true,
-    inline: true,
-    hot: true
+    stats: "errors-only"
   }
 };
