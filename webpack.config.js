@@ -24,6 +24,14 @@ module.exports = {
         options: {
           pretty: true
         }
+      }, {
+        test: /\.sass$/,
+        include: path.join(__dirname, 'src'),
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ]
       }
     ]
   },
