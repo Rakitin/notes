@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        include: path.join(__dirname, 'src'),
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
