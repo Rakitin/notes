@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className='app-head'>Notes</h1>
+        <h1 id='app-head'>Notes</h1>
       </div>
     );
   }
