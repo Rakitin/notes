@@ -6,7 +6,9 @@ export default class EditNote extends Component {
   render() {
     return (
       <div id='edit-note'>
-        <h1>EditNote</h1>
+        <input placeholder='Title' />
+        <textarea placeholder="Text" />
+        <button>Add note</button>
       </div>
     );
   }
