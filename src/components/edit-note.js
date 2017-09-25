@@ -12,12 +12,25 @@ export default class EditNote extends Component {
     };
   }
 
+  handleTitleChange(event) {
+    console.log(event.target.value);
+    this.setState({title: event.target.value});
+  }
+
+  handleTextChange(event) {
+
+  }
+
+  handleEditNote(event) {
+
+  }
+
   render() {
     return (
       <div className='edit-note-form'>
-        <input type="text" name="title" placeholder="Title" />
+        <input type="text" name="title" placeholder="Title" onChange={this.handleTitleChange.bind(this)} />
         <textarea name="text" rows="8" placeholder="Text of note" />
-        <button type="button" name="button">Add note</button>
+        <button type="button" name="button" onClick={this.handleEditNote.bind(this)} >Add note</button>
       </div>
     );
   }
