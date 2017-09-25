@@ -6,7 +6,6 @@ export default class NotesGrid extends Component {
   render() {
     return (
       <div className="notes-grid">
-        
       </div>
     );
   }

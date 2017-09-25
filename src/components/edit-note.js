@@ -3,6 +3,15 @@ import React, {Component} from 'react'
 import './edit-note.sass'
 
 export default class EditNote extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      text: '',
+      color: '#fff'
+    };
+  }
+
   render() {
     return (
       <div className='edit-note-form'>
