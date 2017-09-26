@@ -5,11 +5,16 @@ import NotesGrid from './notes-grid'
 import './app.sass'
 
 export default class App extends Component {
+
+  handleEditNote(note) {
+    console.log(note);
+  }
+
   render() {
     return (
       <div className='app'>
         <h1 className='app-title'>Notes</h1>
-        <EditNote />
+        <EditNote onEditNote={this.handleEditNote}/>
         <NotesGrid />
       </div>
     );
